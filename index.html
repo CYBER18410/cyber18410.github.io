@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CYBER TECH | Issah Mohammed Mujab</title>
+  <meta name="description" content="Official personal website of Issah Mohammed Mujab, founder of CYBER TECH in Ghana." />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #07111f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 14, 27, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    ..logo {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      font-size: 15px;
+      color: #d8e7ff;
+    }
+
+    .nav-links a:hover,
+    .socials a:hover,
+    .footer-links a:hover {
+      color: #59b7ff;
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(circle at top right, rgba(89, 183, 255, 0.22), transparent 25%),
+                  radial-gradient(circle at left, rgba(0, 153, 255, 0.15), transparent 28%),
+                  #07111f;
+    }
+
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+      align-items: center;
+      padding: 70px 0;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(89, 183, 255, 0.14);
+      color: #9fd2ff;
+      border: 1px solid rgba(89, 183, 255, 0.3);
+      padding: 8px 16px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .hero h2 {
+      font-size: 24px;
+      color: #59b7ff;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #d4e3f6;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #59b7ff;
+      color: #07111f;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #7cc6ff;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .mini-card {
+      background: #0d1a2b;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    .mini-card h3 {
+      color: #9fd2ff;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .mini-card p {
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title span {
+      color: #59b7ff;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin: 10px 0 12px;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: auto;
+      color: #c8d7ea;
+    }
+
+    .about {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+      color: #d6e3f3;
+    }
+
+    .skills-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 28px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(89, 183, 255, 0.5);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #59b7ff;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #d6e3f3;
+      font-size: 16px;
+    }
+
+    .contact-card {
+      text-align: center;
+    }
+
+    .contact-card a {
+      color: #ffffff;
+      word-break: break-word;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 28px 0;
+      color: #c5d5e9;
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero-wrap,
+      .skills-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero h2 {
+        font-size: 20px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">CYBER TECH</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container hero-wrap">
+      <div>
+        <div class="tag">Personal Brand Website • Ghana</div>
+        <h1>CYBER TECH</h1>
+        <h2>Cyber Security Specialist • Digital Expert • Trader & Tech Specialist</h2>
+        <p>
+          Building knowledge in technology and cybersecurity while guiding others to navigate the digital world safely and intelligently.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Contact Me</a>
+          <a href="#about" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="mini-card">
+          <h3>Founder</h3>
+          <p>Issah Mohammed Mujab</p>
+        </div>
+        <div class="mini-card">
+          <h3>Base</h3>
+          <p>Ghana</p>
+        </div>
+        <div class="mini-card">
+          <h3>Focus</h3>
+          <p>Technology, Cybersecurity & Digital Growth</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-title">
+        <span>About Me</span>
+        <h2>Who I Am</h2>
+      </div>
+      <div class="about-content">
+        <p>
+          I am Issah Mohammed Mujab, the founder of CYBER TECH. I am passionate about technology, cybersecurity, and the digital world. My goal is to explore modern tech solutions, understand how systems work, and help people stay informed and secure online. Through CYBER TECH, I share knowledge, insights, and digital solutions that help individuals navigate technology with confidence.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-title">
+        <span>Skills & Services</span>
+        <h2>What I Focus On</h2>
+        <p>
+          These are the areas that define the CYBER TECH brand and what I aim to offer through my knowledge and digital presence.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="card">
+          <h3>Cybersecurity Awareness</h3>
+          <p>Helping people understand online risks and how to stay safer in the digital world.</p>
+        </div>
+
+        <div class="card">
+          <h3>Tech Support</h3>
+          <p>Providing guidance for everyday technology problems, devices, and digital tools.</p>
+        </div>
+
+        <div class="card">
+          <h3>Digital Consulting</h3>
+          <p>Helping individuals use technology and online platforms more effectively and smartly.</p>
+        </div>
+
+        <div class="card">
+          <h3>Online Security Tips</h3>
+          <p>Sharing practical advice to protect accounts, devices, and personal information online.</p>
+        </div>
+
+        <div class="card">
+          <h3>Website Technology</h3>
+          <p>Understanding modern website tools, platforms, and the digital systems behind them.</p>
+        </div>
+
+        <div class="card">
+          <h3>Trading & Tech Insight</h3>
+          <p>Blending digital awareness with a sharp interest in trading, strategy, and online opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <span>Contact</span>
+        <h2>Reach Out</h2>
+        <p>
+          If you want to connect, collaborate, or make an inquiry, use the contact details below.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card contact-card">
+          <h3>Email</h3>
+          <p><a href="mailto:Mohammedmujab534@gmail.com">Mohammedmujab534@gmail.com</a></p>
+        </div>
+
+        <div class="card contact-card">
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/233595912084" target="_blank">0595912084</a></p>
+        </div>
+
+        <div class="card contact-card">
+          <h3>Location</h3>
+          <p>Ghana</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-wrap">
+      <p>© 2026 CYBER TECH. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
